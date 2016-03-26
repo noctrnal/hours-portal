@@ -7,18 +7,24 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 [
   { name: "Hours Sheet"},
-].each do |sheet_attributes|
-  Sheet.create(sheet_attributes)
+].each do |attributes|
+  Sheet.create(attributes)
 end
 
 [
   { name: "Education", sheet_id: 1 },
-].each do |category_attributes|
-  Category.create(category_attributes)
+].each do |attributes|
+  Category.create(attributes)
 end
 
 [
   { name: "Chapter Meetings", category_id: 1 },
-].each do |item_attributes|
-  Item.create(item_attributes)
+].each do |attributes|
+  Item.create(attributes)
+end
+
+[
+  { year: 2016, sheet_id: 1 },
+].each do |attributes|
+  SheetManager.create(attributes)
 end
