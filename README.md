@@ -7,7 +7,12 @@ git clone https://github.com/noctrnal/hours-portal.git
 cd hours-portal
 bundle install
 rake db:migrate
-rake db:reset
+```
+
+## Seeding the database
+
+```
+rake db:seed
 ```
 
 ## Run the server
@@ -21,3 +26,7 @@ rails s
 ```
 rake
 ```
+
+## Dependencies
+
+Rails => Rails 5.0.0.beta3

@@ -28,3 +28,9 @@ end
 ].each do |attributes|
   SheetManager.create(attributes)
 end
+
+[
+  { user_id: 1, sheet_id: 1, month: 1, year: 2000},
+].each do |attributes|
+  Hoursheet.create(attributes)
+end

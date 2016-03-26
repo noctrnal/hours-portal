@@ -18,7 +18,7 @@ class Api::V1::SheetManagersController < ApplicationController
     @sheet_manager = SheetManager.new(sheet_manager_params)
 
     if @sheet_manager.save
-      render json: @sheet_manager, status: :created, location: @sheet_manager
+      render json: @sheet_manager, status: :created
     else
       render json: @sheet_manager.errors, status: :unprocessable_entity
     end
