@@ -13,12 +13,18 @@ end
 
 [
   { name: "Education", sheet_id: 1 },
+  { name: "Finance", sheet_id: 1 },
+  { name: "Service", sheet_id: 1 },
+  { name: "Other", sheet_id: 1 },
 ].each do |attributes|
   Category.create(attributes)
 end
 
 [
   { name: "Chapter Meetings", category_id: 1 },
+  { name: "Publicity", category_id: 2 },
+  { name: "Scholarship", category_id: 3 },
+  { name: "Executive Board", category_id: 4 },
 ].each do |attributes|
   Item.create(attributes)
 end
@@ -37,6 +43,9 @@ end
 
 [
   { hoursheet_id: 1, item_id: 1, value: 10 },
+  { hoursheet_id: 1, item_id: 2, value: 20 },
+  { hoursheet_id: 1, item_id: 3, value: 30 },
+  { hoursheet_id: 1, item_id: 4, value: 40 },
 ].each do |attributes|
   Hour.create(attributes)
 end
