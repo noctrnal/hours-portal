@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160326035837) do
+ActiveRecord::Schema.define(version: 20160326042211) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -30,6 +30,15 @@ ActiveRecord::Schema.define(version: 20160326035837) do
   end
 
   add_index "items", ["category_id"], name: "index_items_on_category_id"
+
+  create_table "sheet_managers", force: :cascade do |t|
+    t.integer  "sheet_id"
+    t.integer  "year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "sheet_managers", ["sheet_id"], name: "index_sheet_managers_on_sheet_id"
 
   create_table "sheets", force: :cascade do |t|
     t.string   "name"
