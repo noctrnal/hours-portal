@@ -16,3 +16,9 @@ end
 ].each do |category_attributes|
   Category.create(category_attributes)
 end
+
+[
+  { name: "Chapter Meetings", category_id: 1 },
+].each do |item_attributes|
+  Item.create(item_attributes)
+end
