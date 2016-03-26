@@ -40,7 +40,7 @@ RSpec.describe Api::V1::HoursController, :type => :controller do
     }
   }
 
-  let!(:hour) { create(:hour, valid_attributes) }
+  let!(:hour) { create(:hour) }
   let!(:hoursheet) { create(:hoursheet) }
   let!(:item) { create(:item) }
 

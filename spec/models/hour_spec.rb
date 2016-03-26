@@ -9,7 +9,8 @@ RSpec.describe Hour, :type => :model do
 
   describe "validations" do
     it { is_expected.to validate_presence_of(:hoursheet) }
-    it { is_expected.to validate_presence_of(:item) }
+    it { is_expected.to validate_presence_of(:item_id) }
     it { is_expected.to validate_presence_of(:value) }
+    it { is_expected.to validate_uniqueness_of(:item_id).scoped_to(:hoursheet_id) }
   end
 end
