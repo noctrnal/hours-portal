@@ -1,24 +1,23 @@
-## README
+# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Installation
 
-Things you may want to cover:
+```
+git clone https://github.com/noctrnal/hours-portal.git
+cd hours-portal
+bundle install
+rake db:migrate
+rake db:reset
+```
 
-* Ruby version
+## Run the server
 
-* System dependencies
+```
+rails s
+```
 
-* Configuration
+## Run the specs
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+rake
+```
