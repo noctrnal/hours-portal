@@ -1,5 +1,6 @@
 class Hoursheet < ApplicationRecord
   belongs_to :sheet
+  has_many :hours
 
   validates :user_id, presence: true
   validates :month, presence: true

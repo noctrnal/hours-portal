@@ -30,7 +30,13 @@ end
 end
 
 [
-  { user_id: 1, sheet_id: 1, month: 1, year: 2000},
+  { user_id: 1, sheet_id: 1, month: 1, year: 2000 },
 ].each do |attributes|
   Hoursheet.create(attributes)
+end
+
+[
+  { hoursheet_id: 1, item_id: 1, value: 10 },
+].each do |attributes|
+  Hour.create(attributes)
 end

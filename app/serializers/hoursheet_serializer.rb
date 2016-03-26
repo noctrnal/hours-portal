@@ -26,7 +26,7 @@ class HoursheetSerializer < ActiveModel::Serializer
   end
 
   def hours(item)
-    5
+    Hour.where(:item => item, :hoursheet => object.id).select(:id, :value)
   end
 
   def items(category)
