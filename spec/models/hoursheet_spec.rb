@@ -13,5 +13,6 @@ RSpec.describe Hoursheet, :type => :model do
     it { is_expected.to validate_presence_of(:month) }
     it { is_expected.to validate_presence_of(:year) }
     it { is_expected.to validate_presence_of(:sheet_id) }
+    it { is_expected.to validate_uniqueness_of(:user_id).scoped_to([:month, :year, :sheet_id]) }
   end
 end
