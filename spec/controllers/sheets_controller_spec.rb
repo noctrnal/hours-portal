@@ -32,7 +32,7 @@ RSpec.describe Api::V1::SheetsController, :type => :controller do
     { name: "" }
   }
 
-  let!(:sheet) { Sheet.create(valid_attributes) }
+  let!(:sheet) { create(:sheet, valid_attributes) }
 
   describe "GET index" do
     it "assigns all sheets as @sheets" do

@@ -1,5 +1,5 @@
 FactoryGirl.define do
   factory :sheet do
-    name "MyString"
+    name "Test Sheet"
   end
 end
