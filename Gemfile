@@ -23,15 +23,24 @@ gem 'puma'
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 
+#gem 'rails-controller-testing', :git => 'git://github.com/rails/rails-controller-testing.git'
+gem 'rails-controller-testing'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
   # Use RSpec for specs
-  gem 'rspec-rails', '3.1.0'
+  #gem 'rspec-rails', '3.1.0'
+  %w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
+    gem lib, github: "rspec/#{lib}", branch: 'master'
+  end
 
   # Use Factory Girl for generating random test data
   gem 'factory_girl_rails'
+
+  # Use shoulda-matchers for model specs
+  gem 'shoulda-matchers', '~> 3.1'
 end
 
 group :development do
