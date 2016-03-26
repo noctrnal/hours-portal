@@ -23,8 +23,8 @@ gem 'puma'
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 
-#gem 'rails-controller-testing', :git => 'git://github.com/rails/rails-controller-testing.git'
-gem 'rails-controller-testing'
+# Use AMS for model serialization
+gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
