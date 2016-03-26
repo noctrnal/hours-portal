@@ -18,7 +18,7 @@ class SheetsController < ApplicationController
     @sheet = Sheet.new(sheet_params)
 
     if @sheet.save
-      render json: @sheet, status: :created, location: @sheet
+      render json: @sheet, status: :created
     else
       render json: @sheet.errors, status: :unprocessable_entity
     end

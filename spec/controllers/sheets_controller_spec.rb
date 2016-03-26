@@ -18,7 +18,7 @@ require 'rails_helper'
 # Message expectations are only used when there is no simpler way to specify
 # that an instance is receiving a specific message.
 
-RSpec.describe SheetsController, :type => :controller do
+RSpec.describe Api::V1::SheetsController, :type => :controller do
   it_behaves_like "api_controller"
 
   # This should return the minimal set of attributes required to create a valid
