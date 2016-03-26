@@ -26,6 +26,8 @@ gem 'puma'
 # Use AMS for model serialization
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 
+gem 'rails-controller-testing'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

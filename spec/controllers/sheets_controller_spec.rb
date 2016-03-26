@@ -19,6 +19,7 @@ require 'rails_helper'
 # that an instance is receiving a specific message.
 
 RSpec.describe SheetsController, :type => :controller do
+  it_behaves_like "api_controller"
 
   # This should return the minimal set of attributes required to create a valid
   # Sheet. As you add validations to Sheet, be sure to
