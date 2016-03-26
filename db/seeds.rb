@@ -10,3 +10,9 @@
 ].each do |sheet_attributes|
   Sheet.create(sheet_attributes)
 end
+
+[
+  { name: "Education", sheet_id: 1 },
+].each do |category_attributes|
+  Category.create(category_attributes)
+end
